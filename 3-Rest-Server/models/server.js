@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 
 const users = require('../routes/user')
+const auth = require('../routes/auth')
 const { dbConnection } = require('../database/config')
 
 
@@ -10,6 +11,7 @@ class Server {
       this.app = express();
       this.port = process.env.PORT;
       this.usersPath = '/api/users'
+      this.authPath = '/api/auth';
 
       this.conectarDB();
       this.middleware();
@@ -27,6 +29,7 @@ class Server {
     }
 
     routes() {
+      this.app.use(this.authPath, auth)
       this.app.use(this.usersPath, users)
     }
 
