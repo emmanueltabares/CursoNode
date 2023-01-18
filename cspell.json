@@ -1,0 +1,21 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "categoria",
+        "Categoria",
+        "categorias",
+        "Categorias",
+        "descripcion",
+        "google",
+        "populate",
+        "Unauthorized"
+    ],
+    "ignoreWords": [],
+    "import": [],
+    "language": [
+        "es"
+    ]
+}

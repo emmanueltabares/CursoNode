@@ -1,11 +1,11 @@
-const { isAdmin, tieneRol } = require('./validar-roles')
-const { validarCampos } = require('./validar-campos')
-const { validarJWT } = require('./validar-jwt')
+
+
+const validaCampos = require('../middlewares/validar-campos');
+const validarJWT = require('../middlewares/validar-jwt');
+const validaRoles = require('../middlewares/validar-roles');
 
 module.exports = {
-    isAdmin,
-    tieneRol,
-    validarCampos,
-    validarJWT
+    ...validaCampos,
+    ...validarJWT,
+    ...validaRoles,
 }
-
